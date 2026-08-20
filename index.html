@@ -4,133 +4,105 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Sohag Ahmed | Operations & Systems Builder</title>
-  <style>
-    :root {
-      --primary: #2563eb;
-      --bg: #f8fafc;
-      --text: #0f172a;
-      --card-bg: #ffffff;
-    }
-    * { box-sizing: border-box; margin: 0; padding: 0; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; }
-    body { background-color: var(--bg); color: var(--text); line-height: 1.6; }
-    
-    /* Header */
-    header { background-color: var(--card-bg); padding: 60px 20px; text-align: center; border-bottom: 1px solid #e2e8f0; }
-    header h1 { font-size: 2.5rem; color: var(--text); margin-bottom: 10px; }
-    header p { font-size: 1.2rem; color: #475569; max-width: 600px; margin: 0 auto; }
-
-    /* Main Container */
-    .container { max-width: 900px; margin: 40px auto; padding: 0 20px; }
-    h2 { font-size: 1.8rem; margin-bottom: 20px; border-bottom: 2px solid var(--primary); display: inline-block; padding-bottom: 5px; }
-
-    /* Project Card */
-    .project-card { background: var(--card-bg); border-radius: 12px; padding: 30px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); margin-bottom: 30px; }
-    .project-card h3 { font-size: 1.4rem; color: var(--primary); margin-bottom: 15px; }
-    .project-tags { margin-bottom: 15px; }
-    .tag { background: #e0e7ff; color: #3730a3; padding: 5px 10px; border-radius: 6px; font-size: 0.85rem; font-weight: 600; margin-right: 8px; display: inline-block; }
-    .project-details strong { color: #334155; }
-    .project-details ul { margin-left: 20px; margin-top: 10px; color: #475569; }
-    .project-details li { margin-bottom: 8px; }
-
-    /* Contact Section */
-    .contact { background: var(--card-bg); border-radius: 12px; padding: 30px; text-align: center; box-shadow: 0 4px 6px rgba(0,0,0,0.05); }
-    .btn { display: inline-block; background: var(--primary); color: white; text-decoration: none; padding: 12px 24px; border-radius: 8px; font-weight: 600; margin-top: 15px; transition: 0.2s; }
-    .btn:hover { background: #1d4ed8; }
-
-    /* Footer */
-    footer { text-align: center; padding: 30px; color: #64748b; font-size: 0.9rem; }
-  </style>
+  <!-- Google Fonts for modern typography -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <header>
-    <h1>Sohag Ahmed</h1>
-    <p>Operations Professional & Digital Systems Builder</p>
+  <!-- Hero Section -->
+  <header class="hero">
+    <div class="container">
+      <h1>Sohag Ahmed</h1>
+      <h2>Operations Professional & Digital Systems Builder</h2>
+      <p class="location">London, UK</p>
+      <a href="#projects" class="btn btn-primary">View My Work</a>
+    </div>
   </header>
 
-  <div class="container">
-    
-    <section>
-      <h2>About Me</h2>
-      <p style="color: #475569; margin-bottom: 40px;">
-        I bridge the gap between day-to-day operations and digital efficiency. With a First-Class Honours degree in Business Management (Digital Business) from Kingston University, I specialize in identifying operational bottlenecks and building custom, automated tools to save time, reduce human error, and improve security. I am deeply invested in continuous improvement, actively pursuing advanced safety and facilities management credentials, including IOSH Managing Safely and IWFM Level 3.
-      </p>
-    </section>
+  <!-- About Section -->
+  <section id="about" class="container section-padding">
+    <h2 class="section-title">About Me</h2>
+    <p class="intro-text">
+      I bridge the gap between day-to-day operations and digital efficiency. I specialize in identifying operational bottlenecks and building custom, automated tools to save time, reduce human error, and improve security. 
+    </p>
+  </section>
 
-    <section>
-      <h2>Featured Project</h2>
+  <!-- Featured Project Section -->
+  <section id="projects" class="bg-light section-padding">
+    <div class="container">
+      <h2 class="section-title">Featured Project</h2>
       
-      <div class="project-card">
-        <h3>Digital Safe Drop System</h3>
-        <div class="project-tags">
-          <span class="tag">HTML/CSS</span>
-          <span class="tag">JavaScript</span>
-          <span class="tag">Google Apps Script</span>
-        </div>
-        <img src="Safedrop.png" alt="Safe Drop App Screenshot" style="width: 100%; max-width: 400px; border-radius: 8px; border: 1px solid #e2e8f0; margin-bottom: 20px;">
-        <div class="project-details">
-          <ul>
-            <li><strong>The Problem:</strong> The Finance department struggled with illegible, handwritten paper logs for cash safe drops, causing reconciliation delays and security tracking gaps.</li>
-            <li><strong>The Solution:</strong> I engineered a custom, mobile-responsive web application to replace the paper folder entirely.</li>
-            <li><strong>Key Features:</strong> Designed a dual-PIN digital signature verification system to prevent fraud, instantly pushing timestamped entries to a live, reverse-chronological cloud database for the Finance team.</li>
-            <li><strong>The Impact:</strong> Eliminated paper waste, digitized the audit trail, and modernized the organization's cash-handling SOP. Approved and adopted by the Operations Manager.</li>
+      <div class="project-showcase">
+        <!-- Add your screenshot in the same folder and change the src name below -->
+        <img src="safedrop-screenshot.jpg" alt="Safe Drop System Interface" class="project-img">
+        
+        <div class="project-info">
+          <h3>Digital Safe Drop System</h3>
+          <p class="tech-stack"><strong>Tech:</strong> HTML/CSS | JavaScript | Google Apps Script</p>
+          <ul class="project-details">
+            <li><strong>The Problem:</strong> Finance struggled with illegible, handwritten paper logs for cash safe drops, causing reconciliation delays.</li>
+            <li><strong>The Solution:</strong> Engineered a custom, mobile-responsive web application to replace the paper folder entirely.</li>
+            <li><strong>The Impact:</strong> Eliminated paper waste, digitized the audit trail with a dual-PIN signature system, and modernized the organization's SOP.</li>
           </ul>
         </div>
       </div>
-    </section>
-    <section id="experience" class="experience-section">
-  <h2>Professional Experience</h2>
-  <div class="experience-cards">
-    
-    <!-- Goodenough College Card -->
-    <div class="card">
-      <h3>Duty Manager</h3>
-      <p>Goodenough College</p>
-      <a href="goodenough.html" class="btn">View Role</a>
     </div>
+  </section>
 
-    <!-- Nuffield Health Card -->
-    <div class="card">
-      <h3>Duty Manager</h3>
-      <p>Nuffield Health</p>
-      <a href="nuffield.html" class="btn">View Role</a>
+  <!-- Experience & Education Grid -->
+  <section id="experience" class="container section-padding">
+    <h2 class="section-title">Experience & Education</h2>
+    <div class="card-grid">
+      
+      <div class="card">
+        <h3>Duty Manager</h3>
+        <p class="org">Goodenough College</p>
+        <a href="goodenough.html" class="btn btn-secondary">View Role</a>
+      </div>
+
+      <div class="card">
+        <h3>Duty Manager</h3>
+        <p class="org">Nuffield Health</p>
+        <a href="nuffield.html" class="btn btn-secondary">View Role</a>
+      </div>
+
+      <div class="card">
+        <h3>Qualified Lifeguard</h3>
+        <p class="org">The Hurlingham Club</p>
+        <a href="hurlingham.html" class="btn btn-secondary">View Role</a>
+      </div>
+
+      <div class="card highlight-card">
+        <h3>First-Class Honours (Digital Business)</h3>
+        <p class="org">Kingston University</p>
+        <a href="kingston.html" class="btn btn-secondary">View Degree</a>
+      </div>
+
     </div>
+  </section>
 
-    <!-- Hurlingham Club Card -->
-    <div class="card">
-      <h3>Qualified Lifeguard</h3>
-      <p>The Hurlingham Club</p>
-      <a href="hurlingham.html" class="btn">View Role</a>
+  <!-- Beyond the Desk Section -->
+  <section id="personal" class="bg-light section-padding">
+    <div class="container text-center">
+      <h2 class="section-title">Beyond the Desk</h2>
+      <p>
+        When I am not streamlining operations or writing code, I enjoy exploring the outdoors. You will usually find me hiking coastal paths and walking the grounds of historic National Trust sites, or out on the road touring on my classic-style Royal Enfield motorcycle.
+      </p>
     </div>
-<section id="education" class="experience-section">
-  <h2>Education</h2>
-  <div class="experience-cards">
-    
-    <!-- Education Card -->
-    <div class="card">
-      <h3>Business Management (Digital Business)</h3>
-      <p>Kingston University</p>
-      <a href="kingston.html" class="btn">View Details</a>
-    </div>
+  </section>
 
-  </div>
-</section>
-  </div>
-</section>
-
-    <section class="contact">
-      <h2>Get In Touch</h2>
-      <p style="color: #475569; margin-bottom: 10px;">I am always open to discussing operational improvements and new opportunities.</p>
-      <a href="mailto:ahmed.sohag@outlook.com" class="btn">Email Me</a>
-      <!-- You can add your LinkedIn link below -->
-      <!-- <a href="https://linkedin.com/in/yourprofile" class="btn" style="background: #0f172a; margin-left: 10px;">LinkedIn</a> -->
-    </section>
-
-  </div>
-
+  <!-- Footer -->
   <footer>
-    &copy; 2026 Sohag Ahmed. Built from scratch with HTML & CSS.
+    <div class="container">
+      <h2>Get In Touch</h2>
+      <p>I am always open to discussing operational improvements and new opportunities.</p>
+      <a href="mailto:ahmed.sohag@outlook.com" class="btn btn-primary">Email Me</a>
+      <p class="copyright">© 2026 Sohag Ahmed. Built from scratch with HTML & CSS.</p>
+    </div>
   </footer>
 
+</body>
+</html>
 </body>
 </html>
